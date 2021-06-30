@@ -2,26 +2,32 @@
 * File: 0-strcat.c
 * Auth: Mulisa Gaella
 */
-
 #include "holberton.h"
-
+#include "stdio.h"
 /**
-* strcat - Concatenates the string pointed to by @src, including the terminating
-*          null byte, to the end of the string pointed to by @dest.
-* @dest: A pointer to the string to be concatenated upon.
-* @src: The source string to be appended to @dest.
-*
-* Return: A pointer to the destination string @dest.
+* _strcat - copy src string ontop of dest
+* @src: Char[] to append to dest
+* @dest: Char[] to be appended to
+* Return: Always 0.
 */
-char *strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
-int index = 0, dest_len = 0;
+int countDest = 0;
+int countSrc = 0;
 
-while (dest[index++])
-dest_len++;
+while (dest[countDest] != '\0')
+{
+countDest++;
+}
 
-for (index = 0; src[index]; index++)
-dest[dest_len++] = src[index];
+while (src[countSrc] != '\0')
+{
+dest[countDest] += src[countSrc];
+countSrc++;
+countDest++;
+}
+
+dest += '\0';
 
 return (dest);
 }
