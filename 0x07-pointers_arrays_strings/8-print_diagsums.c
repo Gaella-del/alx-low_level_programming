@@ -1,7 +1,7 @@
 /*
- * File: 8-print_diagsums.c
- * Auth: Brennan D Baraban
- */
+* File: 8-print_diagsums.c
+* Auth: Mulisa Gaella
+*/
 
 #include "holberton.h"
 #include <stdio.h>
